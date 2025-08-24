@@ -1,0 +1,21 @@
+
+services:
+  fabric-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "25565:25565"
+    volumes:
+      - ./serverdata/logs:/server/logs
+      - ./serverdata/mods:/server/mods
+      - ./serverdata/world:/server/world
+
+      - ./serverdata/server.properties:/server/server.properties
+      - ./serverdata/eula.txt:/server/eula.txt
+
+      - ./serverdata/banned-ips.json:/server/banned-ips.json
+      - ./serverdata/banned-players.json:/server/banned-players.json
+      - ./serverdata/ops.json:/server/ops.json
+      - ./serverdata/usercache.json:/server/usercache.json
+      - ./serverdata/whitelist.json:/server/whitelist.json
