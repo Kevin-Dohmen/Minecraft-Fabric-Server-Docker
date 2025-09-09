@@ -1,8 +1,6 @@
-FROM alpine:latest
+FROM openjdk:26-jdk-slim
 
-RUN apk add --no-cache openjdk21
-RUN apk add --no-cache curl
-RUN apk add --no-cache eudev-dev
+RUN apt-get update && apt-get install -y curl
 
 WORKDIR /server
 
