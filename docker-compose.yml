@@ -7,15 +7,20 @@ services:
     ports:
       - "25565:25565"
     volumes:
+      # Data folders
       - ./serverdata/logs:/server/logs
       - ./serverdata/mods:/server/mods
       - ./serverdata/world:/server/world
-
+      # Main files
       - ./serverdata/server.properties:/server/server.properties
       - ./serverdata/eula.txt:/server/eula.txt
-
+      # Config files
       - ./serverdata/banned-ips.json:/server/banned-ips.json
       - ./serverdata/banned-players.json:/server/banned-players.json
       - ./serverdata/ops.json:/server/ops.json
       - ./serverdata/usercache.json:/server/usercache.json
       - ./serverdata/whitelist.json:/server/whitelist.json
+      # Cache
+      - ./cache/.fabric:/server/.fabric
+      - ./cache/libraries:/server/libraries
+      - ./cache/versions:/server/versions
