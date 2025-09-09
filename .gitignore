@@ -1,5 +1,6 @@
 serverdata/logs/*
 serverdata/mods/*
 serverdata/world/*
+serverdata/config/*
 cache/*
 !cache/.keep

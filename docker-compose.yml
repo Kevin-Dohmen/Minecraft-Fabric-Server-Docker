@@ -1,16 +1,16 @@
-
 services:
   fabric-server:
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "25565:25565"
+      - "25565:25565/tcp"
     volumes:
       # Data folders
       - ./serverdata/logs:/server/logs
       - ./serverdata/mods:/server/mods
       - ./serverdata/world:/server/world
+      - ./serverdata/config:/server/config
       # Main files
       - ./serverdata/server.properties:/server/server.properties
       - ./serverdata/eula.txt:/server/eula.txt
