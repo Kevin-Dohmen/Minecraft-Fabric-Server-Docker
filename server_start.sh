@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Auto-accept EULA on startup
+echo "eula=true" > /server/eula.txt
+
 java \
     -Xms1G \
     -Xmx4G \
