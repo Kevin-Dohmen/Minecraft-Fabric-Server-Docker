@@ -25,7 +25,7 @@ java \
     -XX:MaxTenuringThreshold=1 \
     -Dusing.aikars.flags=https://mcflags.emc.gs \
     -Daikars.new.flags=true \
-    -jar server.jar nogui
+    -jar /opt/minecraft/server.jar nogui
 
 sleep infinity
 
