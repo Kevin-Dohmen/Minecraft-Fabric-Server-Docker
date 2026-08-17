@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-RUN apk add --no-cache openjdk21-jre-headless
+RUN apk add --no-cache openjdk25-jre-headless
 RUN apk add --no-cache curl
 RUN apk add --no-cache eudev-dev
 
