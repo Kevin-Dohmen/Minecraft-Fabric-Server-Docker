@@ -4,4 +4,6 @@ serverdata/world/*
 serverdata/config/*
 cache/*
 !cache/.keep
-backups/
+backups/*
+!backups/.keep
+.env

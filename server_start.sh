@@ -3,9 +3,12 @@
 # Auto-accept EULA on startup
 echo "eula=true" > /server/eula.txt
 
+MIN_RAM="${MIN_RAM:-1G}"
+MAX_RAM="${MAX_RAM:-4G}"
+
 java \
-    -Xms1G \
-    -Xmx4G \
+    -Xms"${MIN_RAM}" \
+    -Xmx"${MAX_RAM}" \
     -XX:+UseG1GC \
     -XX:+ParallelRefProcEnabled \
     -XX:MaxGCPauseMillis=200 \
@@ -28,5 +31,3 @@ java \
     -jar /opt/minecraft/server.jar nogui
 
 sleep infinity
-
-# Source: https://minecraftutilities.github.io/blog/optimizing-your-minecraft-server-for-maximum-performance
