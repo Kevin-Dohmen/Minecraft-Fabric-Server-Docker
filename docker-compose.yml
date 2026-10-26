@@ -13,6 +13,8 @@ services:
     environment:
       - MIN_RAM=${MIN_RAM:-1G}
       - MAX_RAM=${MAX_RAM:-4G}
+    # Give the server time to save the world after SIGTERM before Docker kills it
+    stop_grace_period: 60s
     volumes:
       # All server files (auto-generated on first run)
       - ./serverdata:/server
@@ -20,3 +22,5 @@ services:
       - ./cache/.fabric:/server/.fabric
       - ./cache/libraries:/server/libraries
       - ./cache/versions:/server/versions
+      # World backups (written by backup_world.sh)
+      - ./backups:/backups
