@@ -11,7 +11,7 @@ Lightweight Docker setup for running a Minecraft Fabric server with Aikar's opti
 
 2. Adjust variables in `.env` if desired:
    - `MC_VERSION`: Minecraft version (e.g. `26.3`, `1.21.4`, `1.20.1`)
-   - `FABRIC_LOADER_VERSION`: Fabric loader version (e.g. `0.19.5`)
+   - `FABRIC_LOADER_VERSION`: Fabric loader version (e.g. `0.20.1`)
    - `MIN_RAM` / `MAX_RAM`: RAM allocation (e.g. `2G` / `4G`)
    - `SERVER_PORT`: Host port mapping (default `25565`)
 
